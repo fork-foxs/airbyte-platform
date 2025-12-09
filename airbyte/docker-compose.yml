@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15
+    container_name: airbyte-postgres
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: mydb
+    restart: unless-stopped
+
+  airbyte-server:
+    image: airbyte/server:1.8.2
+    container_name: airbyte-server
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_USER: admin
+      DATABASE_PASSWORD: admin123
+      DATABASE_URL: postgres://admin:admin123@postgres:5432/mydb
+    depends_on:
+      - postgres
+    restart: unless-stopped
+

@@ -1,0 +1,11 @@
+services:
+  label-studio:
+    image: heartexlabs/label-studio:latest
+    container_name: label-studio
+    ports:
+      - "8200:8200"
+    volumes:
+      - ./mydata:/label-studio/data
+    user: "1000:1000"
+    restart: unless-stopped
+

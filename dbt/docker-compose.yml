@@ -1,0 +1,7 @@
+services:
+  dbt:
+    image: python:3.11-slim
+    container_name: dbt
+    command: sleep infinity
+    restart: unless-stopped
+
