@@ -19,8 +19,9 @@ GitHub: [airbyte-platform v0.50.40](https://github.com/airbytehq/airbyte-platfor
 Download the required files using:
 
 ```bash
-wget https://raw.githubusercontent.com/airbytehq/airbyte-platform/v0.50.40/docker-compose.yaml
-wget https://raw.githubusercontent.com/airbytehq/airbyte-platform/v0.50.40/.env
+git clone --branch v0.50.40 --depth 1 https://github.com/airbytehq/airbyte-platform.git
+
+git tag
 ````
 
 This will provide:
@@ -72,6 +73,7 @@ Replace `YOUR_SERVER_IP` with your server’s public IP or domain.
 Start all services:
 
 ```bash
+cd airbyte-platform
 docker compose up -d
 ```
 
