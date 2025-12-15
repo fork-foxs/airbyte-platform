@@ -34,6 +34,4 @@ This guide explains how to run Metabase using Docker Compose.
 
 All configuration details, environment variables, and advanced guides are in the official documentation:
 *   **Main Docker Guide:** [Running Metabase on Docker](https://www.metabase.com/docs/latest/installation-and-operation/running-metabase-on-docker)
-*   **Production Setup:** [How to run Metabase in production](https://www.metabase.com/docs/latest/installation-and-operation/running-metabase-in-production)
-
 ---
